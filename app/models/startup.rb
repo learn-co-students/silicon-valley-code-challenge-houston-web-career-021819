@@ -43,7 +43,7 @@ class Startup
         @@all.map { | startup | startup.domain }.uniq #use .uniq to return different results
     end
 
-    def sign_contract(venture_capitalist, type_of_investment, amount) #VC is an object?passing object as argument?
+    def sign_contract(venture_capitalist, type_of_investment, amount) 
         fr_new = FundingRound.new(startup: self, venture_capitalist: venture_capitalist, type: type_of_investment, investment: amount)
         return fr_new
     end
