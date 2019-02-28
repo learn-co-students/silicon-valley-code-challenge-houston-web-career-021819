@@ -63,9 +63,7 @@ class Startup
     end
 
     def big_investors
-        investors.select do |investor|
-            investor.total_worth >= 1000000000
-        end
+        investors & VentureCapitalist.tres_commas_club
     end
 
 
